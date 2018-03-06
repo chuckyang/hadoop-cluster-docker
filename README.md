@@ -1,3 +1,6 @@
+##原文连接
+https://github.com/kiwenlau/hadoop-cluster-docker.git
+增加了hadoop 版本，jdk升级为1.8
 ## Run Hadoop Cluster within Docker Containers
 
 - Blog: [Run Hadoop Cluster in Docker Update](http://kiwenlau.com/2016/06/26/hadoop-cluster-docker-update-english/)

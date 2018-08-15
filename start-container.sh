@@ -15,7 +15,7 @@ sudo docker run -itd \
 		        -p 9000:9000 \
                 --name hadoopmaster \
                 --hostname hadoopmaster \
-                registry.cn-hangzhou.aliyuncs.com/yywh/hadoop:1.9.1 &> /dev/null
+                registry.cn-hangzhou.aliyuncs.com/yywh/hadoop:2.9.1 &> /dev/null
 
 
 # start hadoop slave container
@@ -28,7 +28,7 @@ do
 	                --net=hadoop \
 	                --name hadoopslave$i \
 	                --hostname hadoopslave$i \
-	                registry.cn-hangzhou.aliyuncs.com/yywh/hadoop:1.9.1 &> /dev/null
+	                registry.cn-hangzhou.aliyuncs.com/yywh/hadoop:2.9.1 &> /dev/null
 	i=$(( $i + 1 ))
 done 
 

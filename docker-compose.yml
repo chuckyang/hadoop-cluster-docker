@@ -2,7 +2,7 @@ version: '3'
 
 services:
   master:
-    image: registry.cn-hangzhou.aliyuncs.com/yywh/hadoop:1.9.1
+    image: registry.cn-hangzhou.aliyuncs.com/yywh/hadoop:2.9.1
     hostname: hadoopmaster
     container_name: hadoopmaster
     networks:
@@ -21,7 +21,7 @@ services:
       && ./start-hadoop.sh
       && ping www.baidu.com"
   slave1:
-    image: registry.cn-hangzhou.aliyuncs.com/yywh/hadoop:1.9.1
+    image: registry.cn-hangzhou.aliyuncs.com/yywh/hadoop:2.9.1
     hostname: hadoopslave1
     container_name: hadoopslave1
     networks:
@@ -34,7 +34,7 @@ services:
       bash -c "service ssh start
       && ping www.baidu.com"
   slave2:
-    image: registry.cn-hangzhou.aliyuncs.com/yywh/hadoop:1.9.1
+    image: registry.cn-hangzhou.aliyuncs.com/yywh/hadoop:2.9.1
     hostname: hadoopslave2
     container_name: hadoopslave2
     networks:

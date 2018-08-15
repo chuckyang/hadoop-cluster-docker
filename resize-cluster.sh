@@ -14,7 +14,7 @@ i=1
 rm config/slaves
 while [ $i -lt $N ]
 do
-	echo "hadoop_slave$i" >> config/slaves
+	echo "hadoopslave$i" >> config/slaves
 	((i++))
 done 
 

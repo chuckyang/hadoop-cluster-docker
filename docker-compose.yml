@@ -3,8 +3,8 @@ version: '3'
 services:
   master:
     image: registry.cn-hangzhou.aliyuncs.com/yywh/hadoop:1.9.1
-    hostname: hadoop_master
-    container_name: hadoop_master
+    hostname: hadoopmaster
+    container_name: hadoopmaster
     networks:
      - hadoop
     ports:
@@ -22,8 +22,8 @@ services:
       && ping www.baidu.com"
   slave1:
     image: registry.cn-hangzhou.aliyuncs.com/yywh/hadoop:1.9.1
-    hostname: hadoop_slave1
-    container_name: hadoop_slave1
+    hostname: hadoopslave1
+    container_name: hadoopslave1
     networks:
      - hadoop
     deploy:
@@ -35,8 +35,8 @@ services:
       && ping www.baidu.com"
   slave2:
     image: registry.cn-hangzhou.aliyuncs.com/yywh/hadoop:1.9.1
-    hostname: hadoop_slave2
-    container_name: hadoop_slave2
+    hostname: hadoopslave2
+    container_name: hadoopslave2
     networks:
      - hadoop
     deploy:

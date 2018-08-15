@@ -16,7 +16,10 @@ services:
       placement:
         constraints:
          - node.role == manage
-    command: ./start-hadoop.sh
+    command: >
+      bash -c "service ssh start
+      && ./start-hadoop.sh
+      && ping www.baidu.com"
   slave1:
     image: registry.cn-hangzhou.aliyuncs.com/yywh/hadoop:1.9.1
     hostname: hadoop_slave1
@@ -27,6 +30,10 @@ services:
       placement:
         constraints:
         - node.hostname == dev-01
+    command: >
+      bash -c "service ssh start
+      && ./start-hadoop.sh
+      && ping www.baidu.com"
   slave2:
     image: registry.cn-hangzhou.aliyuncs.com/yywh/hadoop:1.9.1
     hostname: hadoop_slave2
@@ -37,6 +44,10 @@ services:
       placement:
         constraints:
         - node.hostname == dev-02
+    command: >
+      bash -c "service ssh start
+      && ./start-hadoop.sh
+      && ping www.baidu.com"
 networks:
   hadoop:
     driver: overlay

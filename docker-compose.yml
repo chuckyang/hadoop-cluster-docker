@@ -2,7 +2,7 @@ version: '3'
 
 services:
   master:
-    image: jybaby1027/hadoop:v1
+    image: registry.cn-hangzhou.aliyuncs.com/yywh/hadoop:1.9.1
     hostname: hadoop_master
     container_name: hadoop_master
     networks:
@@ -18,7 +18,7 @@ services:
          - node.role == manage
     command: ./start-hadoop.sh
   slave1:
-    image: jybaby1027/hadoop:v1
+    image: registry.cn-hangzhou.aliyuncs.com/yywh/hadoop:1.9.1
     hostname: hadoop_slave1
     container_name: hadoop_slave1
     networks:
@@ -28,7 +28,7 @@ services:
         constraints:
         - node.hostname == dev-01
   slave2:
-    image: jybaby1027/hadoop:v1
+    image: registry.cn-hangzhou.aliyuncs.com/yywh/hadoop:1.9.1
     hostname: hadoop_slave2
     container_name: hadoop_slave2
     networks:

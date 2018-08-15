@@ -9,7 +9,7 @@ RUN apt-get update && \
     apt-get install -y openssh-server  wget
 
 # set environment variable
-ENV HADOOP_VERSION=2.9.1
+ENV HADOOP_VERSION=2.8.4
 ENV HADOOP_HOME=/usr/local/hadoop
 ENV PATH=$PATH:/usr/local/hadoop/bin:/usr/local/hadoop/sbin
 

@@ -24,10 +24,6 @@ services:
     hostname: hadoopslave1
     networks:
      - hadoop
-    deploy:
-      placement:
-        constraints:
-        - node.hostname == dev-01
     command: >
       bash -c "service ssh start
       && ping www.baidu.com"
@@ -36,10 +32,6 @@ services:
     hostname: hadoopslave2
     networks:
      - hadoop
-    deploy:
-      placement:
-        constraints:
-        - node.hostname == dev-02
     command: >
       bash -c "service ssh start
       && ping www.baidu.com"

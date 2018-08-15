@@ -15,7 +15,7 @@ services:
     deploy:
       placement:
         constraints:
-         - node.role == manage
+         - node.role == manager
     command: >
       bash -c "service ssh start
       && ./start-hadoop.sh

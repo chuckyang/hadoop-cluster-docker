@@ -9,6 +9,8 @@ https://github.com/kiwenlau/hadoop-cluster-docker.git
 
 ![alt tag](https://raw.githubusercontent.com/kiwenlau/hadoop-cluster-docker/master/hadoop-cluster-docker.png)
 
+## run docker compose
+sudo docker stack deploy -c docker-compose.yml --with-registry-auth hadoop
 
 ### 3 Nodes Hadoop Cluster
 

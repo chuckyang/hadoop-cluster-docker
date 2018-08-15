@@ -5,7 +5,6 @@ services:
     image: jybaby1027/hadoop:v1
     hostname: hadoop-master
     container_name: hadoop-master
-    domainname: hadoop
     networks:
      - hadoop
     ports:
@@ -22,7 +21,6 @@ services:
     image: jybaby1027/hadoop:v1
     hostname: hadoop-slave1
     container_name: hadoop-slave1
-    domainname: hadoop
     networks:
      - hadoop
     deploy:
@@ -33,7 +31,6 @@ services:
     image: jybaby1027/hadoop:v1
     hostname: hadoop-slave2
     container_name: hadoop-slave2
-    domainname: hadoop
     networks:
      - hadoop
     deploy:

@@ -32,7 +32,6 @@ services:
         - node.hostname == dev-01
     command: >
       bash -c "service ssh start
-      && ./start-hadoop.sh
       && ping www.baidu.com"
   slave2:
     image: registry.cn-hangzhou.aliyuncs.com/yywh/hadoop:1.9.1
@@ -46,7 +45,6 @@ services:
         - node.hostname == dev-02
     command: >
       bash -c "service ssh start
-      && ./start-hadoop.sh
       && ping www.baidu.com"
 networks:
   hadoop:

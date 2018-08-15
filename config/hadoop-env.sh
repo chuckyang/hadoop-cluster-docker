@@ -1,4 +1,4 @@
-export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_162
+export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_181
 export HADOOP_CONF_DIR=${HADOOP_CONF_DIR:-"/etc/hadoop"}
 for f in $HADOOP_HOME/contrib/capacity-scheduler/*.jar; do
   if [ "$HADOOP_CLASSPATH" ]; then

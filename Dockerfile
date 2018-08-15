@@ -1,4 +1,4 @@
-FROM jybaby1027/ubuntu-jre:1.8
+FROM jybaby1027/ubuntu-jre:1.8-cn
 
 MAINTAINER jybaby1027 <yzhang.baby@gmail.com>
 

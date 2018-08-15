@@ -3,8 +3,8 @@ version: '3'
 services:
   master:
     image: jybaby1027/hadoop:v1
-    hostname: hadoop-master
-    container_name: hadoop-master
+    hostname: hadoop_master
+    container_name: hadoop_master
     networks:
      - hadoop
     ports:
@@ -19,24 +19,24 @@ services:
     command: ./start-hadoop.sh
   slave1:
     image: jybaby1027/hadoop:v1
-    hostname: hadoop-slave1
-    container_name: hadoop-slave1
+    hostname: hadoop_slave1
+    container_name: hadoop_slave1
     networks:
      - hadoop
     deploy:
       placement:
         constraints:
-        - node.namenode == dev-01
+        - node.hostname == dev-01
   slave2:
     image: jybaby1027/hadoop:v1
-    hostname: hadoop-slave2
-    container_name: hadoop-slave2
+    hostname: hadoop_slave2
+    container_name: hadoop_slave2
     networks:
      - hadoop
     deploy:
       placement:
         constraints:
-        - node.namenode == dev-02
+        - node.hostname == dev-02
 networks:
   hadoop:
     driver: overlay

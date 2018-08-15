@@ -14,7 +14,6 @@ sudo docker run -itd \
 		        -p 8030-8033:8030-8033 \
 		        -p 9000:9000 \
                 --name hadoop_master \
-                -v $(pwd)/config:/
                 --hostname hadoop_master \
                 registry.cn-hangzhou.aliyuncs.com/yywh/hadoop:1.9.1 &> /dev/null
 

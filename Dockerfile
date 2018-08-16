@@ -45,7 +45,6 @@ RUN chmod +x ~/start-hadoop.sh && \
     chmod +x $HADOOP_HOME/sbin/start-dfs.sh && \
     chmod +x $HADOOP_HOME/sbin/start-yarn.sh 
 
-# format namenode
-RUN /usr/local/hadoop/bin/hdfs namenode -format
+ADD bootstrap.sh /etc/bootstrap.sh
 
-CMD [ "sh", "-c", "service ssh start; bash"]
+CMD ["/etc/bootstrap.sh"]
